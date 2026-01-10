@@ -1,0 +1,8 @@
+#  source('../../my_func.r')
+library(devtools)
+library(dplyr)
+use_r('check')
+use_r('install')
+load_all()
+document()
+check()
