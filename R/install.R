@@ -50,7 +50,7 @@ ins_starx=function(token){
 ins_starNHS=function(token=NULL){
   if(is.null(token)){
     #此token有效期至：2026-10-10
-    token=paste0('github_pat_11BDCPMNA0nccr7qzEzAzB_',
+    token_starNHS=paste0('github_pat_11BDCPMNA0nccr7qzEzAzB_',
                  'v83aKQo52g078FHbtoqOcwEYcTlZJhdMk',
                  'FY9KXBXPALLDTSCRGP9Eqp7yt7')
   }
