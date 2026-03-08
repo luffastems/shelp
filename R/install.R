@@ -16,6 +16,9 @@ ins_starr=function(token=NULL){
                            auth_token = token,
                            force = TRUE,
                            upgrade ='never')
+  if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli", repos = repos)  }
+  if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse", repos = repos)}
+
 }
 
 #' @title 安装starUKB包（需要token）
