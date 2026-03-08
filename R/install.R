@@ -3,9 +3,9 @@
 #' @export
 #'
 ins_starr=function(token=NULL){
-    if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli", repos = repos)  }
-  if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse", repos = repos)}
-  if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs", repos = repos)}
+    if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli")  }
+  if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse")}
+  if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs")}
 
 
   if(is.null(token)){
