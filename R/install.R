@@ -18,6 +18,7 @@ ins_starr=function(token=NULL){
                            upgrade ='never')
   if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli", repos = repos)  }
   if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse", repos = repos)}
+  if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs", repos = repos)}
 
 }
 
