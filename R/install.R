@@ -3,6 +3,11 @@
 #' @export
 #'
 ins_starr=function(token=NULL){
+    if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli", repos = repos)  }
+  if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse", repos = repos)}
+  if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs", repos = repos)}
+
+
   if(is.null(token)){
     #此token有效期至：2026-10-10
     token=paste0('github_pat_11BDCPMNA0KqwVQ2sPO5Fj_',
@@ -16,9 +21,6 @@ ins_starr=function(token=NULL){
                            auth_token = token,
                            force = TRUE,
                            upgrade ='never')
-  if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli", repos = repos)  }
-  if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse", repos = repos)}
-  if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs", repos = repos)}
 
 }
 
