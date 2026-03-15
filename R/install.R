@@ -6,6 +6,7 @@ ins_starr=function(token=NULL){
     if (!requireNamespace("cli", quietly = TRUE)) { utils::install.packages("cli")  }
   if (!requireNamespace("tidyverse", quietly = TRUE)) { utils::install.packages("tidyverse")}
   if (!requireNamespace("fs", quietly = TRUE)) { utils::install.packages("fs")}
+  if (!requireNamespace("digest", quietly = TRUE)) { utils::install.packages("digest")}
 
 
   if(is.null(token)){
@@ -28,6 +29,8 @@ ins_starr=function(token=NULL){
 #' @export
 #'
 ins_starUKB=function(token){
+  if (!requireNamespace("starr", quietly = TRUE)) { ins_starr()}
+
   purrr::possibly(
     function()detach("package:starUKB", unload = TRUE),
     quiet = TRUE)()
@@ -41,6 +44,7 @@ ins_starUKB=function(token){
 #' @export
 #'
 ins_starx=function(token){
+  if (!requireNamespace("starr", quietly = TRUE)) { ins_starr()}
   purrr::possibly(
     function()detach("package:starx", unload = TRUE),
     quiet = TRUE)()
@@ -54,6 +58,7 @@ ins_starx=function(token){
 #' @export
 #'
 ins_starNHS=function(token=NULL){
+  if (!requireNamespace("starr", quietly = TRUE)) { ins_starr()}
   if(is.null(token)){
     #此token有效期至：2026-10-10
     token_starNHS=paste0('github_pat_11BDCPMNA0nccr7qzEzAzB_',
